@@ -23,8 +23,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 @AutoConfigureMockMvc
-public class EmployeeControllerITMysqlLocal {
-
+public class EmployeeControllerMysqlContainerIT extends AbstractContainerBaseTest {
     @Autowired
     private MockMvc mockMvc;
 
@@ -41,7 +40,6 @@ public class EmployeeControllerITMysqlLocal {
 
     @Test
     public void givenEmployeeObject_whenCreateEmployee_thenReturnSavedEmployee() throws Exception{
-
         // given - precondition or setup
         Employee employee = Employee.builder()
                 .firstName("Ramesh")

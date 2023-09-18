@@ -12,7 +12,7 @@ import java.util.List;
 @RequestMapping("/api/employees")
 public class EmployeeController {
 
-    private EmployeeService employeeService;
+    private final EmployeeService employeeService;
 
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
@@ -58,7 +58,7 @@ public class EmployeeController {
 
         employeeService.deleteEmployee(employeeId);
 
-        return new ResponseEntity<String>("Employee deleted successfully!.", HttpStatus.OK);
+        return new ResponseEntity<>("Employee deleted successfully!.", HttpStatus.OK);
 
     }
 

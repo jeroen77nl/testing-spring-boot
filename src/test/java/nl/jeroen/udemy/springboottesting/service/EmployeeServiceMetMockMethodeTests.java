@@ -11,7 +11,7 @@ import org.mockito.Mockito;
 
 import java.util.Optional;
 
-public class EmployeeServiceTestsMetMockMethode {
+public class EmployeeServiceMetMockMethodeTests {
     private EmployeeRepository employeeRepository;
     private EmployeeService employeeService;
 

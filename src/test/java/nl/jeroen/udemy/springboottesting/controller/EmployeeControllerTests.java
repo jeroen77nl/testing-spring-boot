@@ -116,11 +116,6 @@ public class EmployeeControllerTests {
     public void givenInvalidEmployeeId_whenGetEmployeeById_thenReturnEmpty() throws Exception{
         // given - precondition or setup
         long employeeId = 1L;
-        Employee employee = Employee.builder()
-                .firstName("Ramesh")
-                .lastName("Fadatare")
-                .email("ramesh@gmail.com")
-                .build();
         given(employeeService.getEmployeeById(employeeId)).willReturn(Optional.empty());
 
         // when -  action or the behaviour that we are going test
@@ -170,12 +165,6 @@ public class EmployeeControllerTests {
     public void givenUpdatedEmployee_whenUpdateEmployee_thenReturn404() throws Exception{
         // given - precondition or setup
         long employeeId = 1L;
-        Employee savedEmployee = Employee.builder()
-                .firstName("Ramesh")
-                .lastName("Fadatare")
-                .email("ramesh@gmail.com")
-                .build();
-
         Employee updatedEmployee = Employee.builder()
                 .firstName("Ram")
                 .lastName("Jadhav")
